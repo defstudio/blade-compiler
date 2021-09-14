@@ -9,7 +9,7 @@ use Throwable;
 
 class BladeCompiler
 {
-    public function render($content, $data): string
+    public function render(string $content, array $data = []): string
     {
         if (View::exists($content)) {
             return View::make($content, $data)->render();
